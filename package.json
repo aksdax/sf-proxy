@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "main": "lib/proxy.js",
   "scripts": {
-    "start": "node lib/server.js"
+    "start": "docker run sf-proxy-node",
+	"buildDocker": "docker build -t sf-proxy-node ."
   },
   "files": [
     "lib",
@@ -14,7 +15,6 @@
     "package.json"
   ],
   "dependencies": {
-    "@cloudsense/cs-solution-management": "file:cloudsense-cs-solution-management-1.0.7.tgz",
     "debug": "^2.1.2",
     "express": "^3.12.1",
     "jsforce": "^1.9.1",
