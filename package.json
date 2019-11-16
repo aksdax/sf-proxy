@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "main": "lib/proxy.js",
   "scripts": {
-    "start": "docker run sf-proxy-node",
+    "start": "node lib/server.js",
+	"startDocker": "docker run sf-proxy-node",
 	"buildDocker": "docker build -t sf-proxy-node ."
   },
   "files": [
