@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "main": "lib/proxy.js",
   "scripts": {
-    "start": "node lib/server.js",
-	"startDocker": "docker run sf-proxy-node",
-	"buildDocker": "docker build -t sf-proxy-node ."
+    "start": "PORT=3312 node lib/server.js",
+    "startDocker": "docker run -d sf-proxy-node",
+    "buildDocker": "docker build -t sf-proxy-node ."
   },
   "files": [
     "lib",
@@ -16,8 +16,10 @@
     "package.json"
   ],
   "dependencies": {
+    "body-parser": "latest",
     "debug": "^2.1.2",
     "express": "^3.12.1",
+    "express-session": "^1.17.0",
     "jsforce": "^1.9.1",
     "request": "^2.36.0"
   },

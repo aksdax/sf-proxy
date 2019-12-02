@@ -9,7 +9,7 @@ As Salesforce REST API supports CORS (Cross-Origin Resource Sharing) access, thi
 
 ## Usage
 
-Start proxy server in your server environment which can run Node.js app (Heroku is the one you might choose).
+Start proxy server locally which as a Node.js app 
 
 Install required packages :
 
@@ -22,6 +22,16 @@ Run proxy server :
 ```
 $ npm start
 ```
+
+Or you can create a docker image and run the app in a docker container
+```
+npm run dockerBuild
+```
+
+```
+npm run dockerStart
+```
+You can choose to set the env parameters ENV user and ENV pass using the Kitematic ui or 
 
 When you use JSforce in your JavaScript app, set `proxyUrl` when creating `Connection` instance. 
 
